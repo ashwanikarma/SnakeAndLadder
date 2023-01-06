@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Snake & Ladder Simulator");
 
-            int position = 0;
+            int position = 0, NumberOfTimes_Dice = 0; ;
 
             Console.WriteLine("Welcome Player 1");
             Console.WriteLine("Player 1 is at position : " + position);
@@ -19,6 +19,8 @@
 
                 int die = random.Next(1, 7);
                 Console.WriteLine("Player rolls a die and get : {0}", die);
+
+                NumberOfTimes_Dice++; //Checks How many times the dice is thrown
 
                 int check = random.Next(0, 3);
 
@@ -44,8 +46,9 @@
                 {
                     position = temp;
                 } 
-                Console.WriteLine("Player current position is : "+position);
+                Console.WriteLine("Player current position is : "+position); //checks position after every die roll
             }
+            Console.WriteLine("Number of times the dice is Thrown to win is {0}",NumberOfTimes_Dice);
             Console.WriteLine("Current Position is : {0}", position);
         }
     }
